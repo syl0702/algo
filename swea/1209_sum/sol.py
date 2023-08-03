@@ -10,7 +10,6 @@ for tc in range(1, T+1):
 
    for _ in range(100):
         row = list(map(int, input().split()))
-        
         matrix.append(row)
         total = 0
    

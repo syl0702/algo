@@ -58,6 +58,7 @@ for i in range(N):
     numbers = list(map(int, input().split()))
     matrix.append(numbers)
 
+
 # for row in range(len(matrix))
 for row in range(N):
     for col in range(M):
