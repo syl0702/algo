@@ -1,0 +1,17 @@
+def solution(id_pw, db):
+    answer = ''
+    for data in db:
+        if id_pw[0] in data:
+            if id_pw[1] == data[1]:
+                answer = 'login'
+            else:         
+                answer = 'wrong pw'
+        else:
+            answer = 'fail'
+    return answer
+
+# 질문하기
+
+print(solution(["meosseugi", "1234"], [["rardss", "123"], ["yyoom", "1234"], ["meosseugi", "1234"]]))
+print(solution(["programmer01", "15789"], [["programmer02", "111111"], ["programmer00", "134"], ["programmer01", "1145"]]))
+print(solution(["rabbit04", "98761"], [["jaja11", "98761"], ["krong0313", "29440"], ["rabbit00", "111333"]]))
