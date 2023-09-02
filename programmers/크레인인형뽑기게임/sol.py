@@ -1,12 +1,16 @@
 def solution(board, moves):
     answer = 0
     temp = []
+    result = []
     for j in range(len(board)):
         b = [i[j] for i in board]
         temp.append(b)
-    # print(temp)
+    print(temp)
     for m in moves:
-        print(temp[m-1])
+        result.append(temp[m-1][-1])
+        temp[m-1].pop()
+    # print(temp)
+    # print(result)
 
     return answer
 
