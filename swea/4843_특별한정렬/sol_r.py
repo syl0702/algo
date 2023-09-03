@@ -18,7 +18,7 @@ for tc in range(1, T+1):
         # print(numbers)
         numbers.remove(temp[0])
         numbers.remove(temp[-1])
-    # print(numbers)
+    print(numbers)
     answer = sum(result, [])
     print(answer)
 
