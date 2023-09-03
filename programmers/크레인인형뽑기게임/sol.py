@@ -9,7 +9,7 @@ def solution(board, moves):
     for m in moves:
         result.append(temp[m-1][-1])
         temp[m-1].pop()
-    # print(temp)
+    print(temp)
     # print(result)
 
     return answer
