@@ -5,11 +5,29 @@ def solution(board, moves):
     for j in range(len(board)):
         b = [i[j] for i in board]
         temp.append(b)
-    print(temp)
+    # print(temp)
     for m in moves:
-        result.append(temp[m-1][-1])
-        temp[m-1].pop()
-    print(temp)
+        
+        for k in range(len(temp[m-1])):
+
+            if temp[m-1][k] != 0:
+                result.append(temp[m-1][k])
+                temp[m-1].pop(k)
+                # print(result)
+                if len(result) >1:
+                    if result[-1] == result [-2]:
+                        answer += 2
+                        result= result[:-2]
+                break
+                
+
+    # while len(result) > 1:
+    #     for r in range(len(result)-1):
+    #         if  result[r] == result [r+1]:
+    #             answer += 2
+            
+            
+    # print(temp)
     # print(result)
 
     return answer
