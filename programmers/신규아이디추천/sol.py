@@ -39,6 +39,7 @@ def solution(new_id):
 
     return answer
 
+
 print(solution("...!@BaT#*..y.abcdefghijklm"))
 print(solution("z-+.^."))
 print(solution("=.="))
