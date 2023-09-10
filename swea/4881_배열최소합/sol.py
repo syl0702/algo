@@ -47,5 +47,5 @@ for tc in range(1, T+1):
 
     print(MIN_SUM) 
 
-    
+# permutations로도 풀이 가능!
     
