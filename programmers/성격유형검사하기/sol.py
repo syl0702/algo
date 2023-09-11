@@ -1,10 +1,7 @@
 def solution(survey, choices):
     answer = ''
     
-    for i in range(len(survey)):
-        if survey[i] == 'AN':
-            if choices[i] >= 4:
-                choices[i] =choices[i] -3
+    
 
     # for i in range(len(survey)):
     #     if choices[i] <= 4:
