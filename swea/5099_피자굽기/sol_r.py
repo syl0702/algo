@@ -22,8 +22,8 @@ for tc in range(1, T+1):
         if pizza[0] == 0:
             if pan:
                 oven.append(pan.pop(0))
-        else:
-            oven.append(pizza)
+        # else:
+        #     oven.append(pizza)
 
     print(oven[0][1])
     

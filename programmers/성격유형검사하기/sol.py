@@ -1,27 +1,24 @@
 def solution(survey, choices):
     answer = ''
-    
-    
+    for i in range(len(survey)):
+        score = 0
+        if choices[i] >= 4:
+            choices[i]= -(choices[i]-4)
+        else:
+            choices[i]
 
-    # for i in range(len(survey)):
-    #     if choices[i] <= 4:
-    #         answer += survey[i][0]
-    #     else:
-    #         answer += survey[i][-1]
+    temp = [0, 0, 0, 0]
+    print(temp)
+    for j in range(len(survey)):
+        if survey[j] == 'RT' or survey[j] == 'TR':
+            temp[0] += choices[j]
+        elif survey[j] == 'CF' or survey[j] == 'FC':
+            temp[1] += choices[j]
+        elif survey[j] == 'JM' or survey[j] == 'MJ':
+            temp[2] += choices[j]
+        else:
+            temp[3] += choices[j]
 
-    # while len(answer) < 5: 
-    #     if 'A' or 'N' not in answer:
-    #         answer+= 'A'
-    #         continue
-    #     if 'C' or 'F' not in answer:
-    #         answer += 'C'
-    #         continue
-    #     if 'M' or 'J' not in answer:
-    #         answer += 'J'
-    #         continue
-    #     if 'R' or 'T' not in answer:
-    #         answer += 'R'
-    #         continue
 
    
     return answer
