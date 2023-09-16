@@ -6,7 +6,7 @@ T = int(input())
 for tc in range(1, T+1):
     E, N = list(map(int, input().split()))
     nodes = list(map(int, input().split()))
-    tree = [[0]*(E+1) for _ in range(E+1)]
+    tree = [[0]*(E+2) for _ in range(E+2)]
     # pprint(tree)
     temp = []
     # for i in range(1, E+1):
@@ -17,12 +17,14 @@ for tc in range(1, T+1):
     print(temp)
     # print(len(temp))
 
-    # print(tree[0][3])
-    # for i in range(E):
-    #     start = temp[i][0]
-    #     end = temp[i][1]
-    #     print(start, end)
-    #         tree[start][end] = 1
+    # print(tree[5][3])
+    for i in range(E):
+        start = temp[i][0]
+        end = temp[i][1]
+        # print(start, end)
+    # print(tree[start][end])
+        tree[start][end] = 1
+    pprint(tree)
     #         # tree[i+1].append(temp[i][1])
     #         # tree.insert(temp[i][0], temp[i][1])
     #     else:
