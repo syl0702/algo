@@ -24,6 +24,7 @@ for tc in range(1, T+1):
         # print(start, end)
     # print(tree[start][end])
         tree[start][end] = 1
+        # tree[end][start] = 1
     pprint(tree)
     #         # tree[i+1].append(temp[i][1])
     #         # tree.insert(temp[i][0], temp[i][1])
