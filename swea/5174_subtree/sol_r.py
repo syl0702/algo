@@ -36,7 +36,7 @@ for tc in range(1, T+1):
         tree[start][end] = 1
         # tree[end][start] = 1
     # tree 노드 완성
-    # pprint(tree)
+    pprint(tree)
     #         # tree[i+1].append(temp[i][1])
     #         # tree.insert(temp[i][0], temp[i][1])
     #     else:
