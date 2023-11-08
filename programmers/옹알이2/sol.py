@@ -6,9 +6,9 @@ def solution(babbling):
         if "aya" in babble:
             babble = babble.replace("aya", "*")
             
-            # babble_c = babble.count("*")
-            # if babble_c == 1:
-            #     result += 1
+            babble_c = babble.count("*")
+            if babble_c == 1:
+                result += 1
         elif "ye" in babble:
             babble = babble.replace("ye","%")
             # babble_c = babble.count("%")
