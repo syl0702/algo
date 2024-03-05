@@ -1,7 +1,7 @@
 def solution(s):
-    s1 = int(s)
-    temp = s1.sort()
-    print(temp)
+    s1 = list(s)
+    s2 = int(s1)
+    print(s2)
     answer = ''
     return answer
 
