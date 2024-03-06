@@ -1,6 +1,7 @@
 def solution(s):
     s1 = list(s)
-    s2 = int(s1)
+    s1 = ' '.join(s1).split()
+    s2 = list(map(int, s1))
     print(s2)
     answer = ''
     return answer
