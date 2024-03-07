@@ -1,8 +1,6 @@
 def solution(s):
-    s1 = list(s)
-    s1 = ' '.join(s1).split()
-    s2 = list(map(int, s1))
-    print(s2)
+    s1 = list(map(int, s.split()))
+    print(s1)
     answer = ''
     return answer
 
