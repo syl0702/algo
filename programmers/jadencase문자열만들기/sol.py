@@ -1,5 +1,6 @@
 def solution(s):
-    answer = ''
+    answer = str.title(s)
+    # answer = ''
     return answer
 
 print(solution("3people unFollowed me"))
