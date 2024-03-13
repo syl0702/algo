@@ -1,5 +1,9 @@
 def solution(s):
-    answer = str.title(s)
+    for i in s:
+        if i.isdigit():
+            continue
+        else:
+            answer = str.title(s)
     # answer = ''
     return answer
 
