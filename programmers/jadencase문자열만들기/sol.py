@@ -1,7 +1,7 @@
 def solution(s):
     for i in s:
         if i.isdigit():
-            continue
+            pass
         else:
             answer = str.title(s)
     # answer = ''
