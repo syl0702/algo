@@ -1,9 +1,9 @@
 def solution(s):
-    for i in s:
-        if i.isdigit():
-            pass
-        else:
-            answer = str.title(s)
+    for i in range(len(s)):
+        answer = str.title(s)
+        if s[i].isdigit():
+            s[i+1] = str.lower()
+        
     # answer = ''
     return answer
 
