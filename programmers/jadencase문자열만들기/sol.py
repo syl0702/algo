@@ -1,8 +1,8 @@
 def solution(s):
+    answer = str.title(s)
     for i in range(len(s)):
-        answer = str.title(s)
-        if s[i].isdigit():
-            s[i+1] = str.lower()
+        if s[i].isdigit() and i < len(s)-1:
+            answer = answer[:i+1] + answer[i+1].lower() + answer[i+2:]
         
     # answer = ''
     return answer
