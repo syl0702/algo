@@ -1,8 +1,10 @@
 def solution(A,B):
     answer = 0
-    answer += min(A) * max(B)
-    A.remove(min(A))
-    B.remove(max(B))
+    for i in range(len(A)):
+        answer += min(A) * max(B)
+        A.remove(min(A))
+        B.remove(max(B))
+        i += 1
     
 
     return answer
