@@ -1,10 +1,14 @@
 def solution(A,B):
     answer = 0
+    # for i in range(len(A)):
+    #     answer += min(A) * max(B)
+    #     A.remove(min(A))
+    #     B.remove(max(B))
+        # i += 1
+    A.sort(reverse=True)
+    B.sort()
     for i in range(len(A)):
-        answer += min(A) * max(B)
-        A.remove(min(A))
-        B.remove(max(B))
-        i += 1
+        answer += (A[i]*B[i])
     
 
     return answer
