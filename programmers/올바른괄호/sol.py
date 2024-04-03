@@ -5,3 +5,8 @@ def solution(s):
     print('Hello Python')
 
     return True
+
+print(solution("()()"))
+print(solution("(())()"))
+print(solution(")()("))
+print(solution("(()("))
