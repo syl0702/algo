@@ -1,10 +1,18 @@
 def solution(s):
     answer = True
-    if s[0] == ")":
-        return False
-    # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print('Hello Python')
+    stack = []
+    for b in s:
+        if b == '(':
+            stack.append(b)
+        elif len(b) and b == ')' and stack[-1] == '(':
+            stack.pop()
+        elif b == ')':
+            stack.append(b)
 
+    if len(stack) == 0:
+        
+        return True
+    
     return True
 
 print(solution("()()"))
