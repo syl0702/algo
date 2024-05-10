@@ -1,7 +1,10 @@
 def solution(s):
     answer = []
+    s1= s.replace('0', '')
+
+    print(s1)
     return answer
 
-print("110010101001")
-print("01110")
-print("1111111")
+print(solution("110010101001"))
+print(solution("01110"))
+print(solution("1111111"))
