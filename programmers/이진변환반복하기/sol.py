@@ -1,7 +1,7 @@
 def solution(s):
     answer = []
     s1= s.replace('0', '')
-
+    s2 = bin(s1)
     print(s1)
     return answer
 
