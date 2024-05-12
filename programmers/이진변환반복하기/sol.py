@@ -1,8 +1,9 @@
 def solution(s):
     answer = []
     s1= s.replace('0', '')
-    s2 = bin(s1)
-    print(s1)
+    s2 = int(s1)
+    s3 = str(bin(s2))
+    print(s3)
     return answer
 
 print(solution("110010101001"))
