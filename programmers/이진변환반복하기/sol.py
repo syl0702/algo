@@ -3,6 +3,9 @@ def solution(s):
     s1= s.replace('0', '')
     s2 = int(s1)
     s3 = str(bin(s2))
+    if '0' in s3:
+        s3 = s3.replace('0', '')
+        
     print(s3)
     return answer
 
