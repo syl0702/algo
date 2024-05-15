@@ -5,7 +5,8 @@ def solution(s):
         s11 = s.replace('0')
         s22 = bin(int(s11))
         s = str(s22)
-        
+        return
+    
     s1= s.replace('0', '')
     s2 = int(s1)
     s3 = str(bin(s2))
