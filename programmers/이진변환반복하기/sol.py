@@ -13,6 +13,8 @@ def solution(s):
     # s3 = str(bin(s2))
     if '0' in s:
         change(s)
+    else:
+        pass
         
     # print(s3)
     return answer
