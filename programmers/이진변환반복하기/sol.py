@@ -6,7 +6,7 @@ def solution(s):
         s22 = bin(int(s11))
         s = str(s22)
         temp += 1
-        return
+        # return
     
     # s1= s.replace('0', '')
     # s2 = int(s1)
