@@ -11,10 +11,11 @@ def solution(s):
     # s1= s.replace('0', '')
     # s2 = int(s1)
     # s3 = str(bin(s2))
-    if '0' in s:
-        change(s)
-    else:
-        pass
+    for i in len(s):
+        if i == '0':
+            change(s)
+        else:
+            pass
         
     # print(s3)
     return answer
