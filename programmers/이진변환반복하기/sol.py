@@ -19,6 +19,7 @@ def solution(s):
         else:
             pass
         
+        answer = temp
     # print(s3)
     return answer
 
