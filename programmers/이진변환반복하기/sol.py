@@ -13,7 +13,7 @@ def solution(s):
     # s3 = str(bin(s2))
     temp = 0
     for i in range(len(s)):
-        if i == '0':
+        if s[i] == '0':
             change(s)
             temp += 1
         else:
