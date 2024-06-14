@@ -19,7 +19,7 @@ def solution(s):
         else:
             pass
         
-        answer = temp
+    answer.append(temp)
     # print(s3)
     return answer
 
