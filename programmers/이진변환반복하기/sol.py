@@ -4,7 +4,7 @@ def solution(s):
         # temp = 0
         s11 = s.replace('0', '')
         s22 = bin(int(s11))
-        s33 = str(s22)
+        s33 = int(s22, 2)
         print(s33)
         return s33
         # temp += 1
