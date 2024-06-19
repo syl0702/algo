@@ -15,9 +15,12 @@ def solution(s):
     # s3 = str(bin(s2))
     temp = 0
     for i in range(len(s)):
-        if s[i] == '0':
+        if len(s) != 1 & s[i] == '0':
             change(s)
             temp += 1
+        
+        elif len(s) ==1 & s[i] == 's':
+            answer.append(temp)
         else:
             pass
         
