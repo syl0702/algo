@@ -1,19 +1,16 @@
 def solution(s):
-    answer = True
+    answer = False
     stack = []
-    for b in s:
-        if b == '(':
-            stack.append(b)
-        elif len(b) and b == ')' and stack[-1] == '(':
+    for i in range(len(s)):
+        if stack and stack[-1]=='(' and s[i]==')':
             stack.pop()
-        elif b == ')':
-            stack.append(b)
-
+        else:
+            stack.append(s[i])
+    # print(stack)
     if len(stack) == 0:
-        
-        return True
+        answer = True
     
-    return True
+    return answer
 
 print(solution("()()"))
 print(solution("(())()"))
