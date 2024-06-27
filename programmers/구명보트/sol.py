@@ -1,7 +1,8 @@
+from collections import deque
 def solution(people, limit):
     answer = 0
-    people.sort()
-    i = 0 # 시작 인덱스
+    # people.sort()
+    # i = 0 # 시작 인덱스
     # print(people)
     # for p in range(len(people)-1):
     #     print(people[p])
@@ -17,14 +18,16 @@ def solution(people, limit):
             
     # else:
     #     answer += len(people)
-    while i < len(people):
-        if i < len(people)-1 and people[i] + people[i+1] <= limit:
-            answer += 1
-            i += 2
-        else:
-            answer += 1
-            i += 1
+    # 2nd trial
+    # while i < len(people):
+    #     if i < len(people)-1 and people[i] + people[i+1] <= limit:
+    #         answer += 1
+    #         i += 2
+    #     else:
+    #         answer += 1
+    #         i += 1
 
+    # 3rd trial
     # for p in range(len(people)-1):
     #     if p >= len(people):
     #         break
@@ -35,7 +38,23 @@ def solution(people, limit):
     #     else:
     #         answer += 1
     #         p+=1
-            
+
+    # deque solution
+    people = deque(sorted(people, reverse=True))
+
+    while len(people) > 1:
+        if people[0] + people[-1] <= limit:
+            answer += 1
+            people.pop()
+            people.popleft()
+        else:
+            answer += 1
+            people.popleft()
+    
+    if people:
+        answer += 1
+
+
     return answer
 
 print(solution([70, 50, 80, 50], 100))
