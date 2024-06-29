@@ -6,6 +6,7 @@ def solution(arr):
     answer = 0
     # arr = deque(arr)
     temp = []
+    temp.append(lcm(arr[0], arr[1]))
     for a in range(len(arr)-2):
         arr[a] = lcm(arr[a], arr[a+1])
         a+=1
