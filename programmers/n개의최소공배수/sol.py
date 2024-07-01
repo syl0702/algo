@@ -1,12 +1,12 @@
 import math
+from math import gcd
 from collections import deque
-def lcm(a,b):
-    return a*b / math.gcd(a,b)
+# def lcm(a,b):
+#     return a*b / math.gcd(a,b)
 def solution(arr):
-    answer = 0
-    for i in range(arr):
-        arr[i+1] = lcm(arr[i], arr[i+1])
-        i+=2
+    answer = arr[0]
+    for i in arr:
+        answer = answer*i //gcd(answer, i)
 
     return answer
 
