@@ -1,8 +1,10 @@
 def solution(n,a,b):
     answer = 0
-    for i in range(n):
-        if i % 2 == 0 and i == a:
-            answer += 1
+    temp = []
+    for i in range(1, n):
+        if i % 2 == 0:
+            temp.append(i-1)
+    print(temp)
     
 
     return answer
