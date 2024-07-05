@@ -1,6 +1,7 @@
 def solution(n):
     answer = 0
     temp = []
+    dp = [[0]*(n+1) for _ in range(n+1)]
     while n > 0:
         if n > 2:
             temp.append(2)
