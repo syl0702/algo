@@ -1,7 +1,19 @@
+def get_case_count(a, b):
+    if a == 0:
+        return 1
+    if a < b:
+        b = a
+    
+    sum = 0
+
+    while b > 0:
+        sum += get_case_count(a - b, b)
+        b -= 1
+    return sum
+
 def solution(n):
     answer = 0
-    temp = []
-    dp = [[0]*(n+1) for _ in range(n+1)]
+    return get_case_count(n, n-1)
     # 합이 같은 부분집합?
 
     # while n > 0:
@@ -15,7 +27,8 @@ def solution(n):
     #         temp.append(1)
     #         n = n - 1
     # print(temp)
-    return answer
+
+    # return answer
 
 print(solution(4))
 print(solution(3))
