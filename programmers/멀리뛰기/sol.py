@@ -9,7 +9,7 @@ def get_case_count(a, b):
     while b > 0:
         sum += get_case_count(a - b, b)
         b -= 1
-    return sum
+    return sum + 1
 
 def solution(n):
     answer = 0
