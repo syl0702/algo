@@ -13,12 +13,18 @@
 
 def solution(n):
     answer = 0
-    if n == 1:
-        return 1
-    elif n == 2:
-        return 2
+    cache = [0 for _ in range(n+2)]
+    cache[1] = 1
+    cache[2] = 2
+
+    if n <= 2:
+        answer += cache[n] % 1234567
+
     else:
-        return solution(n-1) + solution(n-2)
+        for i in range(3, n+1):
+            cache[i] = cache[i-1] + cache[i-2]
+            answer += cache[n] % 1234567
+    return answer
     # 피보나치????
     # 합이 같은 부분집합?
 
