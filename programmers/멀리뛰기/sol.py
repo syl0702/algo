@@ -13,6 +13,12 @@
 
 def solution(n):
     answer = 0
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 2
+    else:
+        return solution(n-1) + solution(n-2)
     # 피보나치????
     # 합이 같은 부분집합?
 
@@ -28,7 +34,7 @@ def solution(n):
     #         n = n - 1
     # print(temp)
 
-    return answer
+    # return answer
 
 print(solution(4))
 print(solution(3))
