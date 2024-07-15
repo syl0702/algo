@@ -1,8 +1,12 @@
 def solution(n, words):
     answer = []
-
-    # [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print('Hello Python')
+    temp = []
+    for i in range(len(words)):
+        if words[i] in temp:
+            temp.append(words[i])
+            answer.append((i+1)//n)
+        else:
+            i += 1
 
     return answer
 
