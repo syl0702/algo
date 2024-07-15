@@ -1,13 +1,19 @@
 def solution(n, words):
     answer = []
     temp = []
-    for i in range(len(words)):
-        if words[i] in temp or words[i][-1] != temp[-1][-1]:
-            temp.append(words[i])
-            answer.append((i+1)//n)
+    for j in range(len(words)-1):
+        last_char = words[j][-1]
+        first_char = words[j+1][0]
+        if last_char == first_char:
+            for i in range(len(words)):
+                if words[i] in temp:
+                    temp.append(words[i])
+                    answer.append((i+1)//n)
+                else:
+                    temp.append(words[i])
+                    i += 1
         else:
-            temp.append(words[i])
-            i += 1
+            answer.append(j+1//n)
 
     return answer
 
