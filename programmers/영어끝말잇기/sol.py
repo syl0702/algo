@@ -2,7 +2,7 @@ def solution(n, words):
     answer = []
     temp = []
     for i in range(len(words)):
-        if words[i] in temp:
+        if words[i] in temp or words[i][-1] != temp[-1][-1]:
             temp.append(words[i])
             answer.append((i+1)//n)
         else:
