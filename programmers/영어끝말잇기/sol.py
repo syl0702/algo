@@ -6,6 +6,7 @@ def solution(n, words):
             temp.append(words[i])
             answer.append((i+1)//n)
         else:
+            temp.append(words[i])
             i += 1
 
     return answer
