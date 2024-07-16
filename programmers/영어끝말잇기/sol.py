@@ -9,6 +9,7 @@ def solution(n, words):
                 if words[i] in temp:
                     temp.append(words[i])
                     answer.append((i+1)//n)
+                    break
                 else:
                     temp.append(words[i])
                     i += 1
