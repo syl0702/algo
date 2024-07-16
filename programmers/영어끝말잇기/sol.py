@@ -10,11 +10,13 @@ def solution(n, words):
                     temp.append(words[i])
                     answer.append((i+1)//n)
                     break
+        
                 else:
                     temp.append(words[i])
                     i += 1
         else:
-            answer.append(j+1//n)
+            answer.append((j+1)//n)
+            break
 
     return answer
 
