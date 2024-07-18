@@ -14,6 +14,7 @@ def solution(n, words):
                 else:
                     temp.append(words[i])
                     i += 1
+                    continue
         else:
             answer.append((j+1)//n)
             break
