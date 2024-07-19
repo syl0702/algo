@@ -5,16 +5,17 @@ def solution(n, words):
         last_char = words[j][-1]
         first_char = words[j+1][0]
         if last_char == first_char:
-            for i in range(len(words)):
-                if words[i] in temp:
-                    temp.append(words[i])
-                    answer.append((i+1)//n)
-                    break
+            temp.append(words[j])
+            # for i in range(len(words)):
+            #     if words[i] in temp:
+            #         temp.append(words[i])
+            #         answer.append((i+1)//n)
+            #         break
         
-                else:
-                    temp.append(words[i])
-                    i += 1
-                    continue
+            #     else:
+            #         temp.append(words[i])
+            #         i += 1
+            #         continue
         else:
             answer.append((j+1)//n)
             break
