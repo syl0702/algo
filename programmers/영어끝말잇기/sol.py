@@ -6,6 +6,12 @@ def solution(n, words):
         first_char = words[j+1][0]
         if last_char == first_char:
             temp.append(words[j])
+            if temp[0] in words:
+                answer.append((j+1)//n)
+                break
+            else:
+                temp.pop()
+                j += 1
             # for i in range(len(words)):
             #     if words[i] in temp:
             #         temp.append(words[i])
