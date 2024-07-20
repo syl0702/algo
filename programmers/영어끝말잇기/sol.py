@@ -12,6 +12,7 @@ def solution(n, words):
             else:
                 temp.pop()
                 j += 1
+            # 가장 근접
             # for i in range(len(words)):
             #     if words[i] in temp:
             #         temp.append(words[i])
