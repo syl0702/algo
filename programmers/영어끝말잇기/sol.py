@@ -1,31 +1,26 @@
 def solution(n, words):
     answer = []
-    temp = []
+    temp = set() # 이미 사용된 단어 추적.
+    temp.add(words[0])
     for j in range(len(words)-1):
-        last_char = words[j][-1]
-        first_char = words[j+1][0]
-        if last_char == first_char:
-            temp.append(words[j])
-            if temp[0] in words:
-                answer.append((j+1)//n)
-                break
-            else:
-                temp.pop()
-                j += 1
-            # 가장 근접
-            # for i in range(len(words)):
-            #     if words[i] in temp:
-            #         temp.append(words[i])
-            #         answer.append((i+1)//n)
-            #         break
+        if j > 0:
+            last_char = words[j][-1]
+            first_char = words[j+1][0]
         
-            #     else:
-            #         temp.append(words[i])
-            #         i += 1
-            #         continue
-        else:
-            answer.append((j+1)//n)
+            if last_char != first_char:
+                answer = [(j % n)+1, (j//n)+1]
+                break
+
+    # 단어 중복 체크
+        if words[j] in temp:
+            answer = [(j % n)+1, (j//n)+1]
             break
+
+
+        temp.add(words[j])
+        
+    else:
+        answer = [0, 0]
 
     return answer
 
