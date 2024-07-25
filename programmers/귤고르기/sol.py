@@ -1,5 +1,9 @@
+from collections import Counter
 def solution(k, tangerine):
     answer = 0
+    tangs = Counter(tangerine)
+    
+    
     return answer
 
 print(solution(6, [1, 3, 2, 5, 4, 5, 2, 3]))
