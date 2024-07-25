@@ -2,7 +2,7 @@ from collections import Counter
 def solution(k, tangerine):
     answer = 0
     tangs = Counter(tangerine)
-    
+    print(tangs)
     
     return answer
 
