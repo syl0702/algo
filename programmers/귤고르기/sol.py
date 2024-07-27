@@ -5,6 +5,7 @@ def solution(k, tangerine):
     tangs = Counter(tangerine)
     print(tangs)
     print(tangs.most_common(1))
+    print(tangs.elements)
     return answer
 
 print(solution(6, [1, 3, 2, 5, 4, 5, 2, 3]))
