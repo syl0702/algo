@@ -12,6 +12,7 @@ def solution(k, tangerine):
     # print(tangs.values())
     sorted_t = tangs.most_common()
     # print(sorted_t)
+    # 최대한 심플하게 하는 것을 목표로 해볼 것!
     for key, value in sorted_t:
         if value_s < k:
             answer += 1
