@@ -13,12 +13,11 @@ def solution(k, tangerine):
     sorted_t = tangs.most_common()
     # print(sorted_t)
     for key, value in sorted_t:
-        if value < k and value_s < k:
+        if value_s < k:
             answer += 1
             value_s += value
-            continue
         else:
-            answer == 1
+            break # value_s가 k 이상이면 루프 종료
             
     return answer
 
