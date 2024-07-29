@@ -11,15 +11,15 @@ def solution(k, tangerine):
     # print(tangs.keys())
     # print(tangs.values())
     sorted_t = tangs.most_common()
-    print(sorted_t)
-    for key, value in sorted_t.items():
-        if value < k:
+    # print(sorted_t)
+    for key, value in sorted_t:
+        if value < k and value_s < k:
             answer += 1
             value_s += value
             continue
         else:
             answer == 1
-
+            
     return answer
 
 print(solution(6, [1, 3, 2, 5, 4, 5, 2, 3]))
