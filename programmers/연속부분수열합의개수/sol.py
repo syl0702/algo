@@ -4,7 +4,11 @@ def solution(elements):
     # prefix_sum[0] = elements[0]
     # for i in range(1, len(elements)):
     #     prefix_sum[i] = prefix_sum[i-1] + elements[i]
-    elements.sort()
+    # elements.sort()
+    cache = [0] * len(elements)
+    cache[0] = elements[0]
+
+    # 투포인터 알고리즘 공부해보자
     print(elements) 
     return answer
 
