@@ -9,18 +9,25 @@ def solution(elements):
     # cache[0] = elements[0]
 
     # 투포인터 알고리즘 공부해보자
-    cnt = 0
-    interval_sum = 0
-    end = 0
-    M = sum(elements)
-    for start in range(len(elements)):
-        while interval_sum < M and end < len(elements):
-            interval_sum += elements[end]
-            end += 1
-        if interval_sum == M:
-            cnt+= 1
-        interval_sum -= elements[start]
-    print(cnt)
+    # cnt = 0
+    # interval_sum = 0
+    # end = 0
+    # temp = []
+    # M = sum(elements)
+    # for start in range(len(elements)):
+    #     while interval_sum < M and end < len(elements):
+    #         interval_sum += elements[end]
+    #         end += 1
+    #         if interval_sum not in temp:
+    #             temp.append(interval_sum)
+    #             answer+= 1
+    #         else:
+    #             continue
+    #     if interval_sum == M:
+    #         answer+= 1
+    #         interval_sum -= elements[start]
+    # 원하는 답이 안 나온다...6이 한계!
+    
     return answer
 
 print(solution([7, 9, 1, 1, 4]))
