@@ -27,7 +27,16 @@ def solution(elements):
     #         answer+= 1
     #         interval_sum -= elements[start]
     # 원하는 답이 안 나온다...6이 한계!
-    
+    n = len(elements)
+    elements = elements * 2 #for 원형배열 처리
+    set_sums = set()
+
+    for start in range(n):
+        interval_sum = 0
+        for length in range(1, n+1):
+            interval_sum += elements[start+length-1]
+            set_sums.add(interval_sum)
+            answer = len(set_sums)
     return answer
 
 print(solution([7, 9, 1, 1, 4]))
