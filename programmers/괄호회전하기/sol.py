@@ -1,9 +1,12 @@
 def solution(s):
     answer = -1
+    temp = []
+    pairs = {'[': ']', '{': '}', '(': ')'}
     for i in range(len(s)):
         s1 = s[i:] + s[:i]
-        
-        print(s1)
+        if temp[-1] in pairs and s[0] == pairs[temp[-1]]:
+            temp.pop()
+            print(s1)
     return answer
 
 print(solution("[](){}"))
