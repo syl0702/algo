@@ -7,6 +7,8 @@ def solution(s):
         if temp[-1] in pairs and s[0] == pairs[temp[-1]]:
             temp.pop()
             print(s1)
+        else:
+            temp.append()
     return answer
 
 print(solution("[](){}"))
