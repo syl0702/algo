@@ -8,7 +8,7 @@ def solution(s):
             temp.pop()
             print(s1)
         else:
-            temp.append()
+            continue
     return answer
 
 print(solution("[](){}"))
