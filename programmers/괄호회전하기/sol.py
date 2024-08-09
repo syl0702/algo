@@ -8,6 +8,7 @@ def solution(s):
             temp.pop()
             print(s1)
         else:
+            temp.append(s[0])
             continue
     return answer
 
