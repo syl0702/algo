@@ -3,6 +3,7 @@ def solution(s):
     temp = []
     pairs = {'[': ']', '{': '}', '(': ')'}
     for i in range(len(s)):
+        # 이어 붙이기
         s1 = s[i:] + s[:i]
         if temp and temp[-1] in pairs and s[0] == pairs[temp[-1]]:
             temp.pop()
