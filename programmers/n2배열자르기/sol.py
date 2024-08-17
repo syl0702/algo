@@ -2,6 +2,8 @@ def solution(n, left, right):
     answer = []
     array = [[0 for _ in range(n)] for _ in range(n)]
     print(array)
+    for i in range(n):
+        print(i)
     return answer
 
 print(solution(3, 2, 5))
