@@ -1,7 +1,7 @@
 def solution(n, left, right):
     answer = []
     array = [[0 for _ in range(n)] for _ in range(n)]
-    print(array)
+    # print(array)
     for i in range(1, n):
         for j in range(n):
             for k in range(n):
