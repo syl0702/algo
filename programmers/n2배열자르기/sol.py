@@ -2,7 +2,7 @@ def solution(n, left, right):
     answer = []
     array = [[0 for _ in range(n)] for _ in range(n)]
     # print(array)
-    for i in range(1, n):
+    for i in range(1, n+1):
         for j in range(n+1):
             for k in range(n+1):
                 array[j][k] == i
