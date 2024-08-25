@@ -4,8 +4,8 @@ def solution(n, left, right):
     # print(array)
     # 0만 들어간 곳에 숫자 넣기
     for i in range(1, n+1):
-        for j in range(n+1):
-            for k in range(n+1):
+        for j in range(i+1):
+            for k in range(i+1):
                 array[j][k] == i
         print(array)
     return answer
