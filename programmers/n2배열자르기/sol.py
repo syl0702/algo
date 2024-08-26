@@ -3,10 +3,12 @@ def solution(n, left, right):
     array = [[0 for _ in range(n)] for _ in range(n)]
     # print(array)
     # 0만 들어간 곳에 숫자 넣기
-    for i in range(1, n+1):
-        for j in range(i+1):
-            for k in range(i+1):
-                array[j][k] == i
+    # 배열에 1부터 n까지 채우기
+    count = 1
+    for i in range(n):
+        for j in range(n):
+            array[i][j] = count
+            count += 1
         print(array)
     return answer
 
