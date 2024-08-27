@@ -10,6 +10,8 @@ def solution(n, left, right):
             array[i][j] = count
             count += 1
         print(array)
+        arr_to_list = [item for sublist in array for item in sublist]
+        print(arr_to_list)
     return answer
 
 print(solution(3, 2, 5))
