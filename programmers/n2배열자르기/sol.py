@@ -12,6 +12,7 @@ def solution(n, left, right):
         print(array)
         arr_to_list = [item for sublist in array for item in sublist]
         print(arr_to_list)
+        print(arr_to_list[left])
     return answer
 
 print(solution(3, 2, 5))
