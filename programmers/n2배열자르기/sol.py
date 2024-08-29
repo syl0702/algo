@@ -9,10 +9,11 @@ def solution(n, left, right):
         for j in range(n):
             array[i][j] = count
             count += 1
-        print(array)
+        # print(array)
         arr_to_list = [item for sublist in array for item in sublist]
-        print(arr_to_list)
-        print(arr_to_list[left])
+        # print(arr_to_list)
+        # print(arr_to_list[left])
+        print(arr_to_list[left:right])
     return answer
 
 print(solution(3, 2, 5))
