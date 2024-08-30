@@ -13,6 +13,7 @@ def solution(n, left, right):
         arr_to_list = [item for sublist in array for item in sublist]
         # print(arr_to_list)
         # print(arr_to_list[left])
+        # metrics??
         print(arr_to_list[left:right])
     return answer
 
