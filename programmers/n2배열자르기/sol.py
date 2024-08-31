@@ -6,7 +6,7 @@ def solution(n, left, right):
     # 배열에 1부터 n까지 채우기
     count = 1
     for i in range(n):
-        for j in range(n):
+        for j in range(i):
             array[i][j] = count
             count += 1
         # print(array)
